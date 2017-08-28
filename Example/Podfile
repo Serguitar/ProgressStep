@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ProgressStep_Example' do
+  pod 'ProgressStep', :path => '../'
+
+  target 'ProgressStep_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
