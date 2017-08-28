@@ -10,11 +10,11 @@
 		2417C1C4C9C0D2CE1091059C /* Pods_ProgressStep_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C6D80FBF3C0D6D86652426 /* Pods_ProgressStep_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		636C4D1FA991EE7E064BC8FE /* Pods_ProgressStep_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90815459716C36A87379227E /* Pods_ProgressStep_Example.framework */; };
+		847519361F544535003DE097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847519351F544535003DE097 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +27,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		847519341F5443C5003DE097 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0646220D28C35DC5745535B1 /* Pods-ProgressStep_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressStep_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressStep_Example/Pods-ProgressStep_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1B310727EEE614613355F192 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -35,7 +48,6 @@
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* ProgressStep_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressStep_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +56,7 @@
 		74C6D80FBF3C0D6D86652426 /* Pods_ProgressStep_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProgressStep_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		817BA9CA05ADB1EC9C8D6873 /* Pods-ProgressStep_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressStep_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressStep_Example/Pods-ProgressStep_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8316066FAECFE6852AF2A8FF /* ProgressStep.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ProgressStep.podspec; path = ../ProgressStep.podspec; sourceTree = "<group>"; };
+		847519351F544535003DE097 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8EE53C2C7B209E667AAF042D /* Pods-ProgressStep_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressStep_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressStep_Tests/Pods-ProgressStep_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		90815459716C36A87379227E /* Pods_ProgressStep_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProgressStep_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEFCBB2B2F4325CC0CD0937 /* Pods-ProgressStep_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressStep_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressStep_Tests/Pods-ProgressStep_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,9 +128,9 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				847519351F544535003DE097 /* Main.storyboard */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for ProgressStep";
@@ -172,6 +185,7 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				4E3859B372B63378C82F6764 /* [CP] Embed Pods Frameworks */,
 				8241A739E4921FC5D7EC5272 /* [CP] Copy Pods Resources */,
+				847519341F5443C5003DE097 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +230,7 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -248,7 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				847519361F544535003DE097 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -385,14 +400,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -496,11 +503,13 @@
 			baseConfigurationReference = 0646220D28C35DC5745535B1 /* Pods-ProgressStep_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ProgressStep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -510,11 +519,13 @@
 			baseConfigurationReference = 817BA9CA05ADB1EC9C8D6873 /* Pods-ProgressStep_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ProgressStep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

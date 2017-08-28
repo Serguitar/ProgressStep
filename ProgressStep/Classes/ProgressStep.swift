@@ -9,14 +9,14 @@
 import UIKit
 
 @IBDesignable
-class ProgressStep: UIView {
+public class ProgressStep: UIView {
     
     private let linesZValue:UInt32     = 0
     private let gradientZValue:UInt32  = 1
     private let circlesZValue:UInt32   = 2
     
-    @IBInspectable var count: Int = 4
-    @IBInspectable var value: CGFloat = 1.5 {
+    @IBInspectable public var count: Int = 4
+    @IBInspectable public var value: CGFloat = 1.5 {
         didSet {
             redraw()
         }
@@ -37,7 +37,7 @@ class ProgressStep: UIView {
     var layers = [CALayer]()
     
     
-    override var intrinsicContentSize: CGSize {
+    public override var intrinsicContentSize: CGSize {
         let width = 2*radius*CGFloat(count) + lineLength*(CGFloat(count) - 1) + gradientWidth*2
         let height = 2*(radius + gradientWidth)
         
@@ -45,7 +45,7 @@ class ProgressStep: UIView {
     }
 
 
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         if circlesArr.first == nil {
             prepare()
         }
