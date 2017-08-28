@@ -1,0 +1,16 @@
+PODS:
+  - ProgressStep (0.1.0)
+
+DEPENDENCIES:
+  - ProgressStep (from `../`)
+
+EXTERNAL SOURCES:
+  ProgressStep:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ProgressStep: 487b90085047f5d60e84a759201a6d8dc5baabc7
+
+PODFILE CHECKSUM: fe555ee0479219c253df6220da6691303b59f33a
+
+COCOAPODS: 1.2.1
