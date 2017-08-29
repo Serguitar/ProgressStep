@@ -22,24 +22,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="TWQ-M9-zoI" customClass="ProgressStep" customModule="ProgressStep">
-                                <rect key="frame" x="40.5" y="81" width="294" height="58"/>
+                                <rect key="frame" x="59.5" y="60" width="256" height="56"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="50" constant="58" id="Zdy-P4-18Z"/>
-                                    <constraint firstAttribute="width" constant="294" id="fqb-ng-BfP"/>
+                                    <constraint firstAttribute="width" priority="100" constant="294" id="fqb-ng-BfP"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineLength">
-                                        <real key="value" value="21"/>
+                                        <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <real key="value" value="2.5"/>
+                                        <real key="value" value="3.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="count">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="radius">
-                                        <real key="value" value="19"/>
+                                        <real key="value" value="18"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="thickness">
                                         <real key="value" value="2"/>
@@ -59,10 +59,18 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
                                         <color key="value" red="0.21850773692131042" green="0.89440447092056274" blue="0.89071524143218994" alpha="0.42506450688073394" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineThickness">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowHalf" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedFillColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIF-th-Llh">
-                                <rect key="frame" x="119" y="277" width="137" height="113"/>
+                                <rect key="frame" x="119" y="136" width="137" height="113"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgW-0h-dJn">
                                         <rect key="frame" x="87" y="63" width="30" height="30"/>
@@ -96,13 +104,113 @@
                                     <constraint firstAttribute="width" constant="137" id="IgN-Jo-UZu"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ZKc-3l-GrP" customClass="ProgressStep" customModule="ProgressStep">
+                                <rect key="frame" x="69.5" y="280" width="236" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="100" constant="294" id="Bv2-G5-Rhd"/>
+                                    <constraint firstAttribute="height" priority="50" constant="58" id="HPR-Xj-dpY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineLength">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gradientWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.29814755916595459" green="0.48425537347793579" blue="0.91472309827804565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedColor">
+                                        <color key="value" red="0.88228499890000001" green="0.88239115479999997" blue="0.88224893810000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" red="0.2185077369" green="0.89440447089999997" blue="0.89071524140000002" alpha="0.0092579319570000006" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" red="0.2185077369" green="0.89440447089999997" blue="0.89071524140000002" alpha="0.42506450690000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineThickness">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowHalf" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedFillColor">
+                                        <color key="value" red="0.88228499889373779" green="0.88239115476608276" blue="0.88224893808364868" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="vEs-kG-eLw" customClass="ProgressStep" customModule="ProgressStep">
+                                <rect key="frame" x="132" y="336" width="110" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="100" constant="294" id="DOr-eh-mrk"/>
+                                    <constraint firstAttribute="height" priority="50" constant="58" id="HdT-zS-efu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineLength">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="2.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gradientWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.29814755916595459" green="0.48425537347793579" blue="0.91472309827804565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedColor">
+                                        <color key="value" red="0.88228499890000001" green="0.88239115479999997" blue="0.88224893810000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" red="0.2185077369" green="0.89440447089999997" blue="0.89071524140000002" alpha="0.0092579319570000006" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" red="0.2185077369" green="0.89440447089999997" blue="0.89071524140000002" alpha="0.42506450690000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineThickness">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowHalf" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedFillColor">
+                                        <color key="value" red="0.88228499890000001" green="0.88239115479999997" blue="0.88224893810000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97633570432662964" green="0.97502630949020386" blue="0.92914563417434692" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ZKc-3l-GrP" firstAttribute="centerX" secondItem="lIF-th-Llh" secondAttribute="centerX" id="9Z3-jq-rpK"/>
                             <constraint firstItem="lIF-th-Llh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KOS-GH-aXg"/>
-                            <constraint firstItem="TWQ-M9-zoI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="50" constant="61" id="dgz-SR-jUu"/>
+                            <constraint firstItem="vEs-kG-eLw" firstAttribute="centerX" secondItem="ZKc-3l-GrP" secondAttribute="centerX" id="dZv-NO-gsJ"/>
+                            <constraint firstItem="TWQ-M9-zoI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="50" constant="40" id="dgz-SR-jUu"/>
+                            <constraint firstItem="ZKc-3l-GrP" firstAttribute="top" secondItem="lIF-th-Llh" secondAttribute="bottom" constant="31" id="fKg-g6-fav"/>
+                            <constraint firstItem="vEs-kG-eLw" firstAttribute="top" secondItem="ZKc-3l-GrP" secondAttribute="bottom" constant="20" id="jx4-8I-ClZ"/>
                             <constraint firstItem="TWQ-M9-zoI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pbG-jQ-UQC"/>
-                            <constraint firstItem="lIF-th-Llh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uhb-Bh-id3"/>
+                            <constraint firstItem="lIF-th-Llh" firstAttribute="top" secondItem="TWQ-M9-zoI" secondAttribute="bottom" constant="20" id="qz2-BO-RgK"/>
                         </constraints>
                     </view>
                     <connections>

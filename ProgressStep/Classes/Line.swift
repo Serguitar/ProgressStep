@@ -15,7 +15,7 @@ enum LineType {
 }
 
 struct Line {
-    var type: LineType
+    var type:  LineType
     let start: CGPoint
-    let end: CGPoint
+    let end:   CGPoint
 }

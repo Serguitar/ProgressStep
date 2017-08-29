@@ -1,5 +1,5 @@
 PODS:
-  - ProgressStep (0.1.0)
+  - ProgressStep (0.1.1)
 
 DEPENDENCIES:
   - ProgressStep (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ProgressStep: 47531cb1a737b90eac3629150301bef2366d68d1
+  ProgressStep: 241238bc29fc2f5ef15c4a1c4cd5551503be9424
 
 PODFILE CHECKSUM: fe555ee0479219c253df6220da6691303b59f33a
 

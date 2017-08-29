@@ -1,5 +1,5 @@
 //
-//  Circle.swift
+//  Figures.swift
 //  ProgressView
 //
 //  Created by Sergey Lukoyanov on 18.07.17.
@@ -9,15 +9,20 @@
 import Foundation
 import UIKit
 
-enum CircleType {
+enum FigureFillState {
     case empty
     case half
     case full
 }
 
 struct Circle {
-    var type: CircleType
+    var state:  FigureFillState
     let center: CGPoint
     let radius: CGFloat
 }
 
+struct Rectangle {
+    var state:  FigureFillState
+    let frame:  CGRect
+    let cornerRaius: CGFloat
+}
