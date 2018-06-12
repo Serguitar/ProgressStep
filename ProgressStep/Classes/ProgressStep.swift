@@ -34,8 +34,8 @@ public class ProgressStep: UIView {
     @IBInspectable var unselectedFillColor: UIColor = UIColor.white
     
     //gradient (only for circles)
-    @IBInspectable var gradientStartColor: UIColor = UIColor(colorLiteralRed: 1, green: 0, blue: 0, alpha: 0.3)
-    @IBInspectable var gradientEndColor: UIColor = UIColor(colorLiteralRed: 1, green: 0, blue: 0, alpha: 0.01)
+    @IBInspectable var gradientStartColor: UIColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3)
+    @IBInspectable var gradientEndColor: UIColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.01)
 
     var circlesArr = [Circle]()
     var rectanglesArr = [Rectangle]()
