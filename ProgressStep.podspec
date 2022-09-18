@@ -8,8 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ProgressStep'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'A view to show progress.'
+  s.swift_version    = '5.3'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -22,21 +23,11 @@ A view to show progress with half or full step
                        DESC
 
   s.homepage         = 'https://github.com/Serguitar/ProgressStep'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Sergey Lukoyanov' => 'serguitar@mail.ru' }
   s.source           = { :git => 'https://github.com/Serguitar/ProgressStep.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'ProgressStep/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'ProgressStep' => ['ProgressStep/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
