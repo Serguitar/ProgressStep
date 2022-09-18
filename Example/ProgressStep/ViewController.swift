@@ -39,6 +39,4 @@ class ViewController: UIViewController {
         valueTF.text = "\(currentValue)"
         progressView.value = currentValue
     }
-
 }
-
