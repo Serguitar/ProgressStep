@@ -37,13 +37,11 @@ public class ProgressStep: UIView {
     @IBInspectable var gradientStartColor: UIColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3)
     @IBInspectable var gradientEndColor: UIColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.01)
 
-    var circlesArr = [Circle]()
-    var rectanglesArr = [Rectangle]()
-    var linesArr = [Line]()
-    var radGradientLayer: RadialGradientLayer!
-    
-    var layers = [CALayer]()
-    
+    private var circlesArr = [Circle]()
+    private var rectanglesArr = [Rectangle]()
+    private var linesArr = [Line]()
+    private var radGradientLayer: RadialGradientLayer!
+    private var layers = [CALayer]()
     
     public override var intrinsicContentSize: CGSize {
         if isCircle == true {
@@ -56,7 +54,6 @@ public class ProgressStep: UIView {
         }
     }
 
-
     public override func draw(_ rect: CGRect) {
         if circlesArr.first == nil {
             prepare()
@@ -65,8 +62,7 @@ public class ProgressStep: UIView {
         drawProgress()
     }
     
-    
-    func redraw() {
+    private func redraw() {
         for layer in layers {
             layer.removeFromSuperlayer()
         }
@@ -78,8 +74,7 @@ public class ProgressStep: UIView {
         setNeedsDisplay()
     }
     
-    
-    internal func prepare() {
+    private func prepare() {
         let halfHeight = self.frame.size.height/2
         let y = halfHeight
         
@@ -111,21 +106,25 @@ public class ProgressStep: UIView {
             startPoint = CGPoint(x: firstRectangle.frame.midX, y: firstRectangle.frame.midY)
         }
         
+        guard var aStartPoint = startPoint else {
+            return
+        }
+        
         for i in 1 ..< count {
-            startPoint!.x += radius
-            let endPoint = CGPoint(x: startPoint!.x + lineLength, y: startPoint!.y)
-            let line = Line(type: .incomplete, start: startPoint!, end: endPoint)
+            aStartPoint.x += radius
+            let endPoint = CGPoint(x: aStartPoint.x + lineLength, y: aStartPoint.y)
+            let line = Line(type: .incomplete, start: aStartPoint, end: endPoint)
             linesArr.append(line)
             if isCircle == true {
-                startPoint = circlesArr[i].center
+                aStartPoint = circlesArr[i].center
             } else {
                 let rectangle = rectanglesArr[i]
-                 startPoint = CGPoint(x: rectangle.frame.midX, y: rectangle.frame.midY)
+                aStartPoint = CGPoint(x: rectangle.frame.midX, y: rectangle.frame.midY)
             }
         }
     }
     
-    internal func select(value: CGFloat) {
+    private func select(value: CGFloat) {
         var validValue = value
         if validValue < 0 {
             validValue = 0
@@ -173,7 +172,6 @@ public class ProgressStep: UIView {
             }
         }
         
-        
         if valueInt > 0  {
             for i in  0 ..< valueInt - k {
                 var line = linesArr[i]
@@ -183,7 +181,7 @@ public class ProgressStep: UIView {
         }
     }
     
-    internal func drawProgress() {
+    private func drawProgress() {
         if isCircle == true {
             for circle in circlesArr {
                 let path = getCirclePath(circle: circle, thickness: thickness)
@@ -208,7 +206,6 @@ public class ProgressStep: UIView {
             }
         }
         
-        
         var lThickness = thickness
         if lineThickness >= 0 {
             lThickness = lineThickness
@@ -224,7 +221,7 @@ public class ProgressStep: UIView {
         }
     }
     
-    internal func getCirclePath(circle: Circle, thickness: CGFloat) -> UIBezierPath {
+    private func getCirclePath(circle: Circle, thickness: CGFloat) -> UIBezierPath {
         let circlePath = UIBezierPath(
             arcCenter: circle.center,
             radius: CGFloat(circle.radius - thickness/2),
@@ -234,12 +231,12 @@ public class ProgressStep: UIView {
         return circlePath
     }
     
-    internal func getRectanglePath(rectangle: Rectangle, thickness: CGFloat) -> UIBezierPath {
+    private func getRectanglePath(rectangle: Rectangle, thickness: CGFloat) -> UIBezierPath {
         let rectanglePath = UIBezierPath(roundedRect: rectangle.frame, cornerRadius: rectangle.cornerRaius)
         return rectanglePath
     }
     
-    internal func getLinePath(line: Line, thickness: CGFloat) -> UIBezierPath {
+    private func getLinePath(line: Line, thickness: CGFloat) -> UIBezierPath {
         let linePath = UIBezierPath()
 
         var start = line.start
@@ -252,15 +249,15 @@ public class ProgressStep: UIView {
         return linePath
     }
     
-    internal func draw(path: UIBezierPath, withColor color: UIColor, fillColor: UIColor?, zValue: UInt32) {
+    private func draw(path: UIBezierPath, withColor color: UIColor, fillColor: UIColor?, zValue: UInt32) {
         draw(path: path, withColor: color, fillColor: fillColor, lineThickness: thickness, zValue: zValue)
     }
     
-    internal func draw(path: UIBezierPath, withColor color: UIColor, fillColor: UIColor?, lineThickness: CGFloat, zValue: UInt32) {
+    private func draw(path: UIBezierPath, withColor color: UIColor, fillColor: UIColor?, lineThickness: CGFloat, zValue: UInt32) {
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
-        if fillColor != nil {
-            shapeLayer.fillColor = fillColor!.cgColor
+        if let fillColor = fillColor {
+            shapeLayer.fillColor = fillColor.cgColor
         } else {
             shapeLayer.fillColor = UIColor.clear.cgColor
         }
@@ -271,7 +268,7 @@ public class ProgressStep: UIView {
         layers.append(shapeLayer)
     }
     
-    internal func drawGradient(center: CGPoint, minRadius: CGFloat, maxRadius:CGFloat, fromColor: UIColor, toColor: UIColor) {
+    private func drawGradient(center: CGPoint, minRadius: CGFloat, maxRadius:CGFloat, fromColor: UIColor, toColor: UIColor) {
         let color1 = fromColor
         let color2 = toColor
         
@@ -282,6 +279,4 @@ public class ProgressStep: UIView {
         layer.insertSublayer(radGradientLayer, at: gradientZValue)
         layers.append(radGradientLayer)
     }
-
 }
-
